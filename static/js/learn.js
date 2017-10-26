@@ -184,7 +184,7 @@ jQuery(document).ready(function() {
                 var text, clip = new Clipboard('.copy-to-clipboard', {
                     text: function(trigger) {
                         text = $(trigger).prev('code').text();
-                        return text.replace(/^\$\s/gm, '');
+                        return text.replace(/^\$\s/gm, '').replace(/\n+$/g, '');
                     }
                 });
 
